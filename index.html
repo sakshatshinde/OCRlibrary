@@ -13,15 +13,24 @@
         <!-- <input id="myFileInput" type="file" accept="image/*capture=camera">
         For some reason it wont take a "file" input so I decided to use this
         -->
-        
+        <div class="container-fluild p-3 mb-2 bg-warning text-white" >
+            <h1><span>  MIT library OCR </span></h1>
+        </div>
         <input type="text" id="myFileInput" placeholder="Image URL"  />
        
         <input type="button" class="btn btn-outline-success mx-auto" id="go_button" value="Run"/>
             
                 <div class="card text-white bg-primary mb-3" style="max-width:auto;">
                         <div class="card-block">
-                          <h5 class="card-title">Result</h5>
-                          <p class="card-text"><div id="ocr_results"></div></p>
+                          <h5 class="card-title">Result</h5><span>
+
+                          </span>
+                          <p class="card-text"><div id="ocr_results">
+                              <span>
+                                  
+                              </span>
+                              <!-- Results would display here -->
+                          </div></p>
                         </div>
                       </div>
         
@@ -45,6 +54,8 @@
                 var myFileInput = document.getElementById("myFileInput").value;
                 runOCR(myFileInput);
         });
+
+
         </script>
 </body>
 </html>
