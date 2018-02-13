@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>OCRlibrary</title>
 </head>
 <body>
         <!-- <input id="myFileInput" type="file" accept="image/*capture=camera"> -->
-        <input type="text" id="myFileInput" placeholder="Image URL" />
-        <input type="button" id="go_button" value="Run" />
-        <div id="ocr_results"> </div>
+        
+        <input type="text" id="myFileInput" placeholder="Image URL"  />
+       
+        <input type="button" class="btn btn-outline-success mx-auto" id="go_button" value="Run"/>
+        <!--<div id="ocr_results">-->
+            
+                <div class="card text-white bg-primary mb-3" style="max-width:auto;">
+                        <div class="card-block">
+                          <h5 class="card-title">Result</h5>
+                          <p class="card-text"><div id="ocr_results"></div></p>
+                        </div>
+                      </div>
+        
         <div id="ocr_status"> </div>
 
         <script>
@@ -27,10 +39,10 @@
                 });
             }
             //Event Listner       
-            document.getElementById("go_button")
-             .addEventListener("click", function(e) {
-            var myFileInput = document.getElementById("myFileInput").value;
-            runOCR(myFileInput);
+                document.getElementById("go_button")
+                .addEventListener("click", function(e) {
+                var myFileInput = document.getElementById("myFileInput").value;
+                runOCR(myFileInput);
         });
         </script>
 </body>
