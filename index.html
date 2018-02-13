@@ -13,28 +13,37 @@
         <!-- <input id="myFileInput" type="file" accept="image/*capture=camera">
         For some reason it wont take a "file" input so I decided to use this
         -->
-        <div class="container-fluild p-3 mb-2 bg-warning text-white" >
+        <div class="container-fluild p-3 mb-2 bg-warning text-white text-center" >
             <h1><span>  MIT library OCR </span></h1>
         </div>
-        <input type="text" id="myFileInput" placeholder="Image URL"  />
-       
-        <input type="button" class="btn btn-outline-success mx-auto" id="go_button" value="Run"/>
-            
-                <div class="card text-white bg-primary mb-3" style="max-width:auto;">
-                        <div class="card-block">
-                          <h5 class="card-title">Result</h5><span>
+        <!-- Bootstrap Input -->
 
-                          </span>
-                          <p class="card-text"><div id="ocr_results">
-                              <span>
-                                  
-                              </span>
-                              <!-- Results would display here -->
+        <div class="input-group mb-3 p-2 " placeholder="Image URL">
+                <input type="text" class="form-control" id="myFileInput" placeholder="Image URL" aria-label="Image URL" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" id="go_button" type="button">Proceed</button>
+                </div>
+        </div>
+
+        <!-- <input type="text" id="myFileInput" placeholder="Image URL"  />-->
+       
+        <!--<input type="button" class="btn btn-outline-success mx-auto btn-sm mt-1 p-1 my-4 " id="go_button" value="Run"/>
+        -->
+                <div class="card text-white bg-primary mb-3 p-2 m-2" style="max-width:auto;">
+                        <div class="card-block">
+                          <h5 class="card-title text-center">Result</h5>
+                          <p class="card-text">
+                              <div id="ocr_results" class="text-center">
+                                  <!-- Results would display here -->
                           </div></p>
                         </div>
                       </div>
-        
-        <div id="ocr_status"> </div>
+                    </div>
+
+        <div id="ocr_status" class="p-2 m-2"> </div>
+
+       
+        <input type="button" class="btn btn-outline-primary p-2 m-2" value="Refresh Page" onClick="window.location.reload()">
 
         <script>
             function runOCR(myFileInput) {
@@ -53,9 +62,14 @@
                 .addEventListener("click", function(e) {
                 var myFileInput = document.getElementById("myFileInput").value;
                 runOCR(myFileInput);
+                    
+                   
         });
-
+        
+       
 
         </script>
+
+
 </body>
 </html>
